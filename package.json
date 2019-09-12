@@ -1,0 +1,25 @@
+{
+  "name": "taskmaster",
+  "version": "1.0.0",
+  "description": "## [Deployed Endpoint](http://taskmaster-group.us-west-2.elasticbeanstalk.com/api/v1/tasks)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rnmessick/taskmaster.git"
+  },
+  "author": "Renee Messick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rnmessick/taskmaster/issues"
+  },
+  "homepage": "https://github.com/rnmessick/taskmaster#readme",
+  "dependencies": {
+    "aws-sdk": "^2.527.0",
+    "dotenv": "^8.1.0",
+    "faker": "^4.1.0",
+    "uuid": "^3.3.3"
+  }
+}
