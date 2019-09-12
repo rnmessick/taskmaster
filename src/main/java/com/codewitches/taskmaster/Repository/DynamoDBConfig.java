@@ -3,6 +3,7 @@ package com.codewitches.taskmaster.Repository;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
@@ -28,17 +29,17 @@ public class DynamoDBConfig {
     private String bucket;
 
     @Bean
-    public AmazonDynamoDB amazonDynamoDB() {
+    public AmazonDynamoDB amazonDynamoDB(){
         AmazonDynamoDB amazonDynamoDB;
 
         amazonDynamoDB = AmazonDynamoDBClientBuilder.standard()
-            .withCredentials(credentialsProvider())
-            .withRegion(Regions.US_WEST_2)
-            .build();
+                .withCredentials(credentialsProvider())
+                .withRegion(Regions.US_WEST_2)
+                .build();
 
-            return amazonDynamoDB;
-
+        return amazonDynamoDB;
     }
+
 
     public AWSCredentialsProvider credentialsProvider() {
         return new AWSCredentialsProvider() {
@@ -53,6 +54,4 @@ public class DynamoDBConfig {
             }
         };
     }
-
-
 }
